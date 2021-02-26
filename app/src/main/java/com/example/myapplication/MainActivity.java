@@ -32,7 +32,12 @@ public class MainActivity extends AppCompatActivity {
         String fname=firstEt.getText().toString();
         String lname=lastEt.getText().toString();
 
-        Toast.makeText(this, lname, Toast.LENGTH_LONG).show();
+        Intent intent=new Intent(MainActivity.this,Profile.class);
+        intent.putExtra("fname",fname);
+        intent.putExtra("lname",lname);
+        startActivity(intent);
+
+        Toast.makeText(this, "name "+fname, Toast.LENGTH_LONG).show();
 
 
 
